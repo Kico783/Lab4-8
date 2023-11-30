@@ -4,15 +4,12 @@ import java.util.*;
 public class Menu
 {
      private Map<Integer,Command> commands = new HashMap<Integer,Command>();
-
-     List<InsuranceObligation> obligations = new ArrayList<>();
-     Derivative derivative = new Derivative(obligations);
      public Menu(){
-          commands.put(1,new AddInsuranceCommand(obligations));
-          commands.put(2,new CreateDerirativeCommand(obligations,derivative));
-          commands.put(3,new SortByRiskLevelCommand(derivative));
-          commands.put(4,new FindByCostCommand(derivative));
-          commands.put(5,new GetTotalCostCommand(derivative));
+          commands.put(1,new AddInsuranceCommand());
+          commands.put(2,new CreateDerirativeCommand());
+          commands.put(3,new SortByRiskLevelCommand());
+          commands.put(4,new FindByCostCommand());
+          commands.put(5,new GetTotalCostCommand());
      }
      public void displayMenu(){
           for (var command: commands.entrySet()) {
