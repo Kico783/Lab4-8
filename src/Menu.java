@@ -15,9 +15,6 @@ public class Menu
           commands.put(5,new GetTotalCostCommand(derivative));
      }
      public void displayMenu(){
-          for (var command: commands.entrySet()) {
-               System.out.println(command.getKey());
-          }
           System.out.println("1)Добавити зобов'язання");
           System.out.println("2)Створити дериватив");
           System.out.println("3)Відсортувати за рівнем ризику");
